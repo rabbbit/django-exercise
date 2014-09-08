@@ -1,0 +1,7 @@
+The instructions are simple: in this archive, you'll find two files, Workbook2.csv and Workbook2.prn, which need to be displayed by the software you deliver in HTML format. 
+
+If you have any questions, please contact "Sander van den Berg"mailto:svdberg@marktplaats.nl.
+
+One note: our mail system frowns on .zip attachments. Usually, .tar.{gz,bz2} or .rar archives will be fine, though.
+
+Have fun!
