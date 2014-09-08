@@ -4,4 +4,11 @@
 			<th> {{ col_name }} </th>
 		{% endfor %}
 	</tr>
+	{% for row in data %}
+		<tr>
+			{% for column in row %}
+				<td> {{ column }} </td>
+			{% endfor %}
+		</tr>
+	{% endfor %}
 <table>
