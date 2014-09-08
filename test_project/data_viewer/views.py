@@ -1,4 +1,5 @@
 import csv
+import os
 
 from django.shortcuts import render
 
@@ -27,7 +28,7 @@ def get_csv_data():
 
 	data = []
 
-	with open('data_viewer/data/Workbook2.csv') as f:
+	with open(_make_path('data/Workbook2.csv')) as f:
 		reader = csv.reader(f)
 
 		col_names = next(reader)
@@ -40,7 +41,7 @@ def get_csv_data():
 
 def get_prn_data():
 
-	with open('data_viewer/data/Workbook2.prn') as f:
+	with open(_make_path('data/Workbook2.prn')) as f:
 		lines = f.readlines()
 
 	col_begins = _find_col_begins(lines)
@@ -48,6 +49,10 @@ def get_prn_data():
 
 
 	return data[0], data[1:]
+
+def _make_path(path):
+	basepath = os.path.dirname(__file__)
+	return os.path.abspath(os.path.join(basepath, path))
 
 
 def _make_encoding(entry):
